@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Loh Xin Yin — Portfolio</title><link rel="stylesheet" href="styles.css"/></head>
+<body>
+<div class="container">
+  <div class="topbar"><span>Loh Xin Yin — Portfolio 2026</span>
+    <div class="links"><a href="index.html" class="active">Home</a><a href="resume.html">Resume</a><a href="projects.html">Projects</a><a href="about.html">About Me</a></div>
+  </div>
+
+  <!-- BOARD 1: hero, mirrors inspo2 top card -->
+  <div class="board hero-board reveal visible">
+    <div>
+      <div class="kick">Loh<br>Xin Yin</div>
+      <p class="micro">BBA Marketing (Distinction), NUS. Second Major in Communications &amp; New Media. Comms Secretary, 46th NUSSU. Temasek Public Affairs intern.</p>
+      <div class="brandmark">XINYIN<br>PORTFOLIO</div>
+    </div>
+    <div class="hero-mid">
+      <div class="m-mark hide-m" style="position:absolute;right:6%;top:0">M</div>
+      <div class="hero-fig">
+        <div class="hero-blue"></div>
+        <img src="assets/me.png" onerror="this.onerror=null;this.src='assets/hero.jpg'" alt="Portrait of Loh Xin Yin"/>
+      </div>
+      <h1 class="hero-title">STORYTELLING</h1>
+      <p class="hero-sub">Communications · Marketing · Public Affairs — <a href="projects.html" style="border-bottom:2px solid var(--ink);font-weight:600">selected work →</a></p>
+      <div class="hero-foot"><span class="micro" style="margin:0">Currently: Project Mgmt / Digital Intern, Temasek</span><span class="chip"></span></div>
+    </div>
+    <div style="display:flex;flex-direction:column;justify-content:space-between;align-items:flex-end">
+      <div class="m-mark hide-m">M</div>
+      <div class="v-text">BRAND<br>STORYTELLER<br>PLEASE SCROLL</div>
+      <span class="chip"></span>
+    </div>
+  </div>
+
+  <!-- ROW 2: two Part. panels, mirrors inspo2 middle row -->
+  <div class="duo">
+    <div class="panel reveal">
+      <div class="pic"><img src="assets/hero.jpg" style="object-position:center 22%" alt="Xin Yin at NUSSU meeting"/></div>
+      <div class="txt">
+        <div class="part-no"><small>Part.</small>01</div>
+        <div class="part-h">About</div>
+        <p class="part-p">Final-year NUS Business (Marketing) student working across communications, programmes and stakeholder engagement. Interested in how institutions connect with the people they serve. <a class="morelink" href="about.html">About me →</a></p>
+        <div class="m-mark">M</div>
+      </div>
+    </div>
+    <div class="panel reveal">
+      <div class="txt" style="flex:0 0 200px">
+        <div class="v-mini">HARVARD HUAP</div>
+        <div class="part-h" style="margin-top:14px">Communications Lead</div>
+        <p class="part-p">Vice-President (Communications), Harvard Undergraduates in Asia Programme. Rebrand and outreach to a 5K audience.</p>
+        <div><a class="morelink" href="projects.html">View project →</a></div>
+        <div class="m-mark">M</div>
+      </div>
+      <div class="pic" style="flex:1.25;min-height:460px"><img src="assets/huap.jpg" style="object-position:center 12%" alt="Xin Yin emceeing HUAP fireside chat"/></div>
+    </div>
+  </div>
+
+  <div style="height:34px"></div>
+
+  <!-- ROW 3: mirrors inspo2 bottom row -->
+  <div class="duo">
+    <div class="panel reveal" style="flex-direction:column">
+      <div class="bar-top"></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:28px 30px;align-items:center">
+        <p class="part-p">NUSSU Communications: website and EDM revamp (+90% engagement), crisis communications support, and freshmen experience work with university stakeholders.</p>
+        <div><img src="assets/proj-yih.jpg" alt="Xin Yin emceeing YIH Reopening" style="width:100%;height:220px;object-fit:cover;filter:sepia(.15)"/></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:0 30px 24px">
+        <a class="morelink" href="resume.html">Resume →</a><span class="sq green"></span>
+      </div>
+    </div>
+    <div class="panel reveal">
+      <div class="txt">
+        <div class="m-mark" style="position:static;text-align:left">M</div>
+        <div class="part-no"><small>Part.</small>02</div>
+        <div class="part-h">Media Feature</div>
+        <p class="part-p">Guest on The Hop Pod, speaking on student life and communications work beyond campus.</p>
+        <div><a class="morelink" href="projects.html">View project →</a></div>
+        <div style="margin-top:14px"><span class="sq mustard"></span></div>
+      </div>
+      <div class="pic" style="flex:0 0 54%;min-height:430px"><img src="assets/hoppod.jpeg" style="object-position:center 30%" alt="Xin Yin on The Hop Pod"/></div>
+    </div>
+  </div>
+
+  <div style="height:34px"></div>
+
+  <!-- BOARD: testimonials -->
+  <div class="board reveal" style="position:relative">
+    <div class="part-no"><small>Part.</small>03</div>
+    <div class="part-h">Testimonials</div>
+    <p class="part-p">References from NUS staff I worked with. Select to read the full letter.</p>
+    <div class="testi2"><p class="q">“She shows up with ideas, follows through with care, and makes everyone around her better at their jobs.”</p><cite>Ms Elissa Chia — Associate Director, Communications, NUS OSA · 21 Nov 2025</cite><br><button class="linklike" onclick="openTestimonial('elissa')">View testimonial</button></div>
+    <div class="testi2"><p class="q">“Through her leadership, creativity, and resilience, many joint projects achieved great success.”</p><cite>Mr Lawrence Chai — Head, Digital Marketing, NUS OUC · 6 Nov 2025</cite><br><button class="linklike" onclick="openTestimonial('lawrence')">View testimonial</button></div>
+  </div>
+
+  <footer class="site">© 2026 Loh Xin Yin · xinyin@u.nus.edu · linkedin.com/in/xinyinloh</footer>
+</div>
+
+<div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeTestimonial()"><div class="modal-card"><div class="modal-head"><div><h3 id="modalTitle"></h3><p id="modalDate"></p></div><button class="modal-close" onclick="closeTestimonial()">✕</button></div><div class="modal-body" id="modalBody"></div></div></div>
+<script src="script.js"></script>
+</body></html>

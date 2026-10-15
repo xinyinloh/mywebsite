@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap');
+
+:root{
+  --stage:#A8ABA0;
+  --paper:#FFFEF7;
+  --ink:#1B1B1B;
+  --grey:#B9B9B9;
+  --muted:#6E6A5E;
+  --blue:#2B7AC0;
+  --green:#22B14C;
+  --mustard:#DFA53A;
+  --line:rgba(0,0,0,.09);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--stage);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.55;font-size:15px}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.container{max-width:1160px;margin:0 auto;padding:28px 24px}
+.serif{font-family:'Cormorant Garamond',serif}
+.sans{font-family:'Archivo',sans-serif}
+
+/* top mini nav — quiet, lets the boards lead */
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:4px 4px 18px;font-family:'Archivo',sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#3a3a38}
+.topbar .links{display:flex;gap:22px}
+.topbar a{opacity:.65;border-bottom:2px solid transparent;padding-bottom:2px}
+.topbar a:hover,.topbar a.active{opacity:1;border-color:var(--ink)}
+
+/* THE BOARD — inspo2 cream card */
+.board{background:var(--paper);box-shadow:0 24px 50px rgba(0,0,0,.28);padding:56px 60px;position:relative;margin-bottom:34px}
+.board:last-child{margin-bottom:0}
+
+/* HERO board — mirrors inspo2 top */
+.hero-board{display:grid;grid-template-columns:190px 1fr 76px;gap:34px;min-height:520px}
+.kick{font-family:'Cormorant Garamond',serif;font-size:21px;line-height:1.15}
+.micro{font-family:'Cormorant Garamond',serif;font-size:12.5px;line-height:1.5;color:#4a463d;margin-top:26px;max-width:170px}
+.brandmark{font-family:'Archivo',sans-serif;font-weight:800;font-size:17px;line-height:1.35;letter-spacing:.02em;margin-top:26px}
+.hero-mid{text-align:center;position:relative}
+.hero-fig{position:relative;display:inline-block}
+.hero-blue{position:absolute;inset:6% -4% -2% -6%;background:var(--blue);border-radius:46% 54% 52% 48%/52% 44% 56% 48%;transform:rotate(-5deg)}
+.hero-fig img{position:relative;width:min(400px,58vw);height:400px;object-fit:cover;border-radius:46% 54% 52% 48%/52% 44% 56% 48%;filter:sepia(.18) contrast(1.03);animation:floaty 6s ease-in-out infinite}
+.hero-title{font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(28px,4.6vw,46px);letter-spacing:.04em;margin-top:26px}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-size:15px;color:#4a463d;margin-top:6px}
+.m-mark{font-family:'Archivo',sans-serif;color:var(--grey);font-size:26px;font-weight:500;text-align:right}
+.m-mark::after{content:'';display:block;width:44px;height:2px;background:var(--grey);margin:6px 0 0 auto;transform:rotate(-32deg)}
+.v-text{writing-mode:vertical-rl;font-family:'Archivo',sans-serif;font-weight:800;font-size:21px;letter-spacing:.14em;line-height:1.5;text-align:left}
+.chip{display:inline-block;width:74px;height:30px;background:var(--blue)}
+.chip.green{background:var(--green)} .chip.mustard{background:var(--mustard)}
+.hero-foot{display:flex;justify-content:space-between;align-items:flex-end;margin-top:8px}
+
+/* Part panels — inspo2 middle/bottom rows */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.panel{background:var(--paper);box-shadow:0 24px 50px rgba(0,0,0,.28);display:flex;overflow:hidden;min-height:340px}
+.panel .pic{flex:0 0 44%;position:relative;min-height:340px}
+.panel .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:sepia(.22) contrast(1.02)}
+.panel .txt{flex:1;padding:36px 34px;display:flex;flex-direction:column;justify-content:center;position:relative}
+.part-no{font-family:'Archivo',sans-serif;font-weight:800;font-size:64px;line-height:1}
+.part-no small{font-size:14px;font-weight:700;vertical-align:super;margin-right:4px}
+.part-h{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:19px;margin:10px 0 8px}
+.part-p{font-family:'Cormorant Garamond',serif;font-size:12.5px;line-height:1.55;color:#4a463d}
+.panel .m-mark{position:absolute;right:22px;bottom:16px;font-size:18px}
+.v-mini{writing-mode:vertical-rl;font-family:'Archivo',sans-serif;font-weight:800;font-size:15px;letter-spacing:.28em}
+.bar-top{height:22px;background:var(--green)}
+.pic-mustard{background:var(--mustard)}
+.pic-mustard img{mix-blend-mode:multiply;filter:contrast(1.05) sepia(.3)}
+.sq{width:26px;height:26px;display:inline-block}
+.sq.green{background:var(--green)} .sq.mustard{background:var(--mustard)} .sq.blue{background:var(--blue)}
+
+/* buttons — minimal, inspo2 has almost none; keep small underline links */
+.morelink{font-family:'Archivo',sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;border-bottom:2px solid var(--ink);padding-bottom:3px;display:inline-block;margin-top:16px;transition:.2s}
+.morelink:hover{color:var(--blue);border-color:var(--blue)}
+.tag{font-family:'Archivo',sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--line);padding:4px 10px;margin:0 6px 6px 0;display:inline-block;background:#fff}
+
+/* resume rows */
+.job{border-top:1px solid var(--line);padding:18px 0}
+.job:first-of-type{border-top:none}
+.job-date{font-family:'Archivo',sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#2B5876}
+.job h4{font-family:'Archivo',sans-serif;font-size:17px;font-weight:800;margin:4px 0}
+.job ul{margin:6px 0 0 18px;font-family:'Cormorant Garamond',serif;font-size:14px;color:#4a463d}
+
+/* carousel — sits inside a board */
+.car{position:relative;background:#fff;border:1px solid var(--line)}
+.slides{display:flex;transition:transform .55s cubic-bezier(.65,0,.35,1)}
+.slide{min-width:100%;display:grid;grid-template-columns:1fr 1fr}
+.slide img{width:100%;height:420px;object-fit:cover;filter:sepia(.22)}
+.slide-body{padding:38px 36px;display:flex;flex-direction:column;justify-content:center}
+.slide-body h3{font-family:'Archivo',sans-serif;font-weight:800;font-size:26px;line-height:1.15}
+.car-btn{position:absolute;top:46%;width:44px;height:44px;border-radius:50%;border:1px solid var(--ink);background:var(--paper);cursor:pointer;font-size:20px;z-index:2}
+.car-btn:hover{background:var(--ink);color:var(--paper)}
+#prevBtn{left:-22px}#nextBtn{right:-22px}
+.dots{display:flex;gap:8px;justify-content:center;padding:16px;background:#fff;border:1px solid var(--line);border-top:none}
+.dot{width:34px;height:6px;background:rgba(0,0,0,.14);border:none;cursor:pointer}
+.dot.active{background:var(--ink)}
+.count{font-family:'Archivo',sans-serif;font-size:11px;letter-spacing:.2em}
+
+/* testimonials */
+.testi2{border-top:1px solid var(--line);padding:20px 0}
+.testi2 .q{font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;line-height:1.45}
+.testi2 cite{font-style:normal;font-family:'Archivo',sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+button.linklike{background:none;border:none;cursor:pointer;font-family:'Archivo',sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;border-bottom:2px solid var(--blue);color:#1c4e7a;padding-bottom:2px;margin-top:10px}
+
+/* modal — cream card like the boards */
+.modal-overlay{position:fixed;inset:0;background:rgba(40,40,38,.55);display:none;align-items:center;justify-content:center;z-index:100;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-card{background:var(--paper);max-width:660px;width:100%;max-height:84vh;display:flex;flex-direction:column;box-shadow:0 30px 60px rgba(0,0,0,.4)}
+.modal-head{padding:24px 28px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:14px}
+.modal-head h3{font-family:'Archivo',sans-serif;font-size:17px}
+.modal-head p{font-size:12px;color:var(--muted)}
+.modal-body{padding:22px 28px;overflow:auto;font-family:'Cormorant Garamond',serif;font-size:15px}
+.modal-body p{margin-bottom:12px}
+.modal-close{border:1px solid var(--ink);background:none;width:34px;height:34px;border-radius:50%;cursor:pointer;flex-shrink:0}
+
+/* about */
+.about-split{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.about-split .pic{position:relative;min-height:480px}
+.about-split .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:sepia(.2)}
+.contact-list{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.contact-list a{border:1px solid var(--line);background:#fff;padding:10px 14px;font-size:13px}
+.contact-list a:hover{border-color:var(--ink)}
+input,textarea{border:1px solid var(--line);background:#fff;padding:11px 13px;font-family:inherit;font-size:13px;width:100%}
+form.contact-form{display:flex;flex-direction:column;gap:10px;margin-top:14px}
+
+footer.site{text-align:center;font-family:'Archivo',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#3c3c3a;padding:6px 0 10px}
+
+.reveal{opacity:0;transform:translateY(20px);transition:.6s ease}
+.reveal.visible{opacity:1;transform:none}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+
+/* doodle companion */
+.doodle{position:absolute;width:110px;pointer-events:none;animation:floaty 5s ease-in-out infinite;filter:drop-shadow(0 6px 10px rgba(0,0,0,.18))}
+.doodle-cap{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;color:#4a463d}
+
+/* video links (Temasek slide) */
+.vid-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.vid-group{font-family:'Archivo',sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:#2B5876;margin:14px 0 2px}
+a.yt{display:flex;gap:10px;align-items:center;background:#fff;border:1px solid var(--line);padding:6px;text-decoration:none;transition:.2s}
+a.yt:hover{border-color:var(--ink);transform:translateY(-2px)}
+a.yt img{width:96px;height:54px;object-fit:cover;flex-shrink:0;background:#000}
+a.yt span{font-size:11.5px;line-height:1.35;font-weight:600}
+a.yt small{display:block;font-weight:400;color:var(--muted);font-size:10.5px}
+
+@media(max-width:900px){
+  .board{padding:34px 24px}
+  .hero-board{grid-template-columns:1fr;text-align:center}
+  .hero-board .micro{margin-inline:auto}
+  .v-text,.m-mark.hide-m{display:none}
+  .duo,.slide,.about-split{grid-template-columns:1fr}
+  .panel{flex-direction:column}
+  .panel .pic{min-height:240px}
+  .topbar .links{gap:12px;font-size:10px}
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>About Me — Loh Xin Yin</title><link rel="stylesheet" href="styles.css"/></head>
+<body>
+<div class="container">
+  <div class="topbar"><span>Loh Xin Yin — Portfolio 2026</span>
+    <div class="links"><a href="index.html">Home</a><a href="resume.html">Resume</a><a href="projects.html">Projects</a><a href="about.html" class="active">About Me</a></div>
+  </div>
+
+  <div class="board reveal visible" style="padding:0;overflow:hidden">
+    <div class="bar-top"></div>
+    <div class="about-split">
+      <div style="padding:38px 36px">
+        <div class="kick">About<br>Me</div>
+        <p class="micro" style="max-width:none">Final-year NUS Business (Marketing) student with a second major in Communications &amp; New Media. Focused on communications, marketing and public affairs — work that connects institutions with the people they serve.</p>
+        <div class="part-h">Contacts</div>
+        <div class="contact-list">
+          <a href="tel:+6597686686">📞 (+65) 9768 6686</a>
+          <a href="mailto:xinyin@u.nus.edu">📧 xinyin@u.nus.edu</a>
+          <a href="https://www.linkedin.com/in/xinyinloh/" target="_blank">💼 linkedin.com/in/xinyinloh</a>
+          <a href="#">📍 Singapore — NUS / Temasek Public Affairs</a>
+        </div>
+        <form class="contact-form" onsubmit="event.preventDefault();alert('Demo form — email me at xinyin@u.nus.edu');">
+          <input placeholder="Your name" required/><input placeholder="Your email" type="email" required/><textarea rows="3" placeholder="Hello..."></textarea>
+          <div><button class="morelink" style="border:none;background:none;cursor:pointer" type="submit">Send →</button></div>
+        </form>
+        <div style="margin-top:14px"><button class="linklike" onclick="openTestimonial('elissa')">Elissa Chia ★</button> · <button class="linklike" onclick="openTestimonial('lawrence')">Lawrence Chai ★</button></div>
+      </div>
+      <div class="pic" style="position:relative"><img src="assets/me.png" onerror="this.onerror=null;this.src='assets/hero.jpg'" alt="Xin Yin"/><img class="doodle" src="assets/doodle.png" alt="doodle" style="left:16px;bottom:14px;width:84px"/></div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:18px 36px;border-top:1px solid var(--line)"><span class="part-p">English · Mandarin · Premiere · Photoshop · Excel/PPT Blackbelt</span><span class="sq green"></span></div>
+  </div>
+
+  <footer class="site">© 2026 Loh Xin Yin</footer>
+</div>
+<div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeTestimonial()"><div class="modal-card"><div class="modal-head"><div><h3 id="modalTitle"></h3><p id="modalDate"></p></div><button class="modal-close" onclick="closeTestimonial()">✕</button></div><div class="modal-body" id="modalBody"></div></div></div>
+<script src="script.js"></script>
+</body></html>
